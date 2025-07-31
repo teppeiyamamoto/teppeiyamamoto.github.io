@@ -1,0 +1,294 @@
+\documentclass[11pt]{article}
+
+% == margins
+\addtolength{\hoffset}{-0.75in} \addtolength{\voffset}{-0.75in}
+\addtolength{\textwidth}{1.5in} \addtolength{\textheight}{1.6in}
+
+% == this allows separate bibliography
+\usepackage{bibunits}
+\usepackage{natbib}
+
+\renewcommand{\refname}{\vspace{-0.5in}} %adjust this number to get spacing right
+
+%% === hyperref options ===
+\usepackage{color}
+\usepackage[bookmarks=true, bookmarksopen=true, linkcolor=webred]{hyperref}
+
+%% === document starts here
+
+\title{\bf POL 572: Quantitative Analysis II}
+\author{\Large {\bf Spring 2009}}
+\date{Kosuke Imai}
+
+\begin{document}
+
+\maketitle
+
+\section{Contact Information}
+
+\begin{flushleft}
+\begin{tabular}{lcl}
+Office: Corwin Hall 041 \\
+Office Phone: 258--6601 \\
+Email: \href{mailto:kimai@Princeton.Edu}{kimai@Princeton.Edu} \\
+URL: \href{http://imai.princeton.edu}{http://imai.princeton.edu}\\
+\end{tabular}
+\end{flushleft}
+
+\section{Logistics}
+
+\begin{itemize}
+\item Lectures: Wednesdays 9:00--10:20am in McCosh 62, and Thursdays
+  10:30am--11:50am in Frist 307
+
+\item Precepts (taught by Teppei Yamamoto
+  \href{mailto:tyamamot@Princeton.EDU}{tyamamot@Princeton.EDU}):
+  Monday 6pm -- 7:20pm in Friend 004
+
+\item Kosuke's Office hours: Fridays 10am -- noon or stop by anytime 
+
+\item Teppei's Office hours: Mondays \& Tuesdays 2pm -- 4pm in 235A Corwin
+\end{itemize}
+
+\section{Questions about the Course Materials}
+
+In addition to precepts and office hours, please use the {\it
+  discussion board} at Blackboard when asking questions about
+lectures, problem sets, and other course materials.  This allows all
+students to benefit from the discussion and help each other understand
+the materials.  Teppei will be primarily responsible for handling
+questions about precepts and problem sets, while I will answer the
+questions about the lectures.  But, students are also encouraged to
+participate in discussions and answer any quesions that are posted.
+
+\section{Course Description}
+
+\paragraph{Catalogue Description.} This is the second course in the
+quantitative methods sequence. It will emphasize the flexibility of
+the maximum likelihood framework in the context of regression models,
+models that mix qualitative and continuous endogenous variables,
+hazard models, and scaling models.
+
+\paragraph{What this course is about.} This course is the first course
+in applied statistical methods for social scientists. Students will
+learn a variety of basic {\it cross-section} regression models (as
+time permits!) including linear regression model, discrete choice
+models, duration (or hazard) models, event count models, structural
+equation models, and others.  Unlike traditional courses on applied
+regression modeling, I will emphasize the connections between these
+methods and causal inference, which is the primary goal of social
+science research.
+
+
+\section{Prerequisites}
+
+There are three prerequisites for this course.
+\begin{enumerate}
+\item Mathematics covered in POL 502
+\item Probability and statistics covered in POL 571
+\item Statistical computing and programming covered in the statistical
+  software workshop held at the end of January
+\end{enumerate}
+
+\section{Course Requirements}
+
+The final grades are based on the following two items:
+\begin{enumerate}
+\item Problem sets (40\%): Although you are allowed to discuss the
+  problem sets with others, you should not copy someone else's
+  computer code or answers.  In particular, sharing a paper or
+  electronic copy of your code and answers with other students is
+  strictly prohibited.
+ 
+\item Midterm exam (20\%): The midterm exam will be held around the
+  spring break.
+
+\item Final exam (40\%): It is also possible to conduct a
+  final project in stead of taking the final exam if I view your
+  proposed project appropriate for this course.  If you prefer this
+  option, you must obtain my permission by the end of February.
+
+\end{enumerate} 
+
+\section{Computing}
+
+In this course, we use a statistical computing environment, called R.
+R is available for any platform and without charge at \href{
+  http://www.r-project.org/}{http://www.r-project.org/}.  In a recent
+{\it New York Times} article, R is described as software that ``allows
+statisticians to do very intricate and complicated analyses without
+knowing the blood and guts of computing systems.''
+
+\section{Books}
+
+\begin{enumerate}
+\item Much of the following book will be assigned as required reading
+  prior to the lectures:
+   \begin{bibunit}[unsrtnat]
+     \nocite{free:05}
+      \putbib[my]
+    \end{bibunit}
+
+
+  \item In addition, you may find the following monographs useful:
+    \begin{enumerate}
+    \item Political Methodology
+   \begin{bibunit}[unsrtnat]
+     \nocite{king:98}
+      \putbib[my]
+    \end{bibunit}
+
+    \item Probability and Statistics
+   \begin{bibunit}[unsrtnat]
+     \nocite{wass:05}
+      \putbib[my]
+    \end{bibunit}
+
+    \item Econometrics
+   \begin{bibunit}[unsrtnat]
+     \nocite{wool:02}
+      \putbib[my]
+    \end{bibunit}
+
+    \item R
+   \begin{bibunit}[unsrtnat]
+     \nocite{fox:02}
+      \putbib[my]
+    \end{bibunit}
+    \end{enumerate}
+\end{enumerate}
+
+\section{Course Outline}
+
+Each topic is followed by the list of required readings.  I assume
+that students read these materials {\it prior to} each lecture.
+
+\begin{enumerate}
+\item Review, Introduction, and Overview
+  \begin{enumerate}
+  \item Causal inference, experimentation, and statistics 
+
+      \medskip
+      Chapter~1 of Freedman
+      \medskip
+
+  \item The potential outcomes framework of causal inference
+
+  \begin{bibunit}[unsrtnat]
+    \nocite{holl:86}
+    \nocite{zhan:rubi:03}
+    \putbib[my] 
+  \end{bibunit}
+  \medskip
+  {\it *For Zhan and Rubin (2003), skip Sections 4 -- 7.} \\
+
+  \item Randomized inference for classical randomized experiments
+    
+  \begin{bibunit}[unsrtnat]
+    \medskip Chapter~2 of Paul Rosenbaum {\it Observational Studies}, 2nd ed.
+    2002.   \nocite{ho:imai:06}
+    \putbib[imai]
+  \end{bibunit}
+  \medskip    
+  {\it *For Rosenbaum (2002), skip Sections 2.4.4, 2.5.4., 2.8, 2.9, and 2.10.} \\
+
+  \item Classical randomized experiments and simple regression
+
+    \begin{bibunit}[unsrtnat]
+      \medskip
+      Freedman, Chapter~2
+      \nocite{free:08}
+      \putbib[my]
+    \end{bibunit}
+    \medskip
+    {\it *For Freedman (2008), skip Sections 5 -- 8.} \\
+
+  \item Observational studies, parametric adjustment, and matching
+
+    \begin{bibunit}[unsrtnat]
+      \medskip
+      \nocite{ho:imai:king:stua:07}
+      \putbib[imai]
+    \end{bibunit}
+
+  \end{enumerate}
+
+
+\item Multiple regression
+
+  \begin{enumerate}
+  \item Least squares
+
+    \begin{bibunit}[unsrtnat]
+      \medskip Chapter~4 of Freedman 
+      \putbib[my]
+    \end{bibunit}    
+    \medskip {\it *If you are not comfortable with matrix algebra, you
+      may refer to Chapter~3 of Freedman. } \\
+    
+  \item Maximum likelihood 
+
+      \medskip Section~6.1 of Freedman 
+      \medskip
+    
+  \end{enumerate}
+
+\item Structural equation modeling, and instrumental variables
+
+  \begin{enumerate}
+  \item Selection problem, instrumental variables, and causality
+
+    \begin{bibunit}[unsrtnat]
+      \medskip Chapter~8 of Freedman
+      \nocite{angr:imbe:rubi:96} 
+      \putbib[my]
+    \end{bibunit}    
+ 
+  \item Direct and indirect effects
+
+    \begin{bibunit}[unsrtnat]
+      \medskip Chapter~5 of Freedman
+      \nocite{imai:keel:yama:10} 
+      \putbib[imai]
+    \end{bibunit}    
+
+  \end{enumerate}
+
+\item Parametric regression modeling with various data types
+  \begin{enumerate}
+  \item Likelihood theory
+
+    \medskip Chapter~4 of Gary King {\it Unifying Political
+      Methodology} University of Michigan Press, 1998.
+
+  \item Parametric and nonparametric Bootstrap
+
+    \begin{bibunit}[unsrtnat]
+      \medskip Chapter~7 of Freedman \nocite{king:tomz:witt:00}
+      \putbib[my]
+    \end{bibunit}    
+
+  \item Binary data
+
+    \medskip Chapter~6 of Freedman
+
+  \item Other data types (as time permits)
+    \begin{enumerate}
+    \item Ordered and multinomial data
+      
+    \item Truncated and censored data
+      
+    \item Survival data
+      
+    \item Event count data
+      
+    \item Bivariate and multivariate data
+      
+    \item Data with nonrandom sample selection
+
+    \end{enumerate}
+  \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,308 @@
+\documentclass[11pt]{article}
+
+% == margins
+\addtolength{\hoffset}{-0.75in} \addtolength{\voffset}{-0.75in}
+\addtolength{\textwidth}{1.5in} \addtolength{\textheight}{1.6in}
+
+
+% == this allows separate bibliography
+\usepackage{bibunits}
+\usepackage{natbib}
+
+\renewcommand{\refname}{\vspace{-0.5in}} %adjust this number to get spacing right
+
+%% === hyperref options ===
+\usepackage{color}
+\usepackage[bookmarks=true, bookmarksopen=true, linkcolor=webred]{hyperref}
+
+%% === document starts here
+
+\title{\bf POL 573: Quantitative Analysis III}
+\author{\Large {\bf Fall 2009}}
+\date{Kosuke Imai}
+
+\begin{document}
+
+\maketitle
+
+\begin{quote}
+  This course is the second course in applied statistical methods for
+  social scientists. Building on the materials we covered in POL 572
+  or its equivalent (i.e., linear regression, structural equation
+  modeling, instrumental variables, maximum likelihood estimation,
+  discrete choice models), students will learn a variety of
+  statistical methods including models for longitudinal data and
+  survival data. Unlike traditional courses on applied regression
+  modeling, I will emphasize the connections between these methods and
+  causal inference, which is the primary goal of social science
+  research.
+\end{quote}
+
+\section{Contact Information}
+
+\begin{flushleft}
+\begin{tabular}{lcl}
+Office: Corwin Hall 036\\
+Office Phone: 258--6601 \\
+Email: \href{mailto:kimai@Princeton.Edu}{kimai@Princeton.Edu} \\
+URL: \href{http://imai.princeton.edu}{http://imai.princeton.edu}\\
+\end{tabular}
+\end{flushleft}
+
+\section{Logistics}
+
+\begin{itemize}
+\item Lectures: Mondays (101 Sherrerd Hall) and Thursdays (023
+  Robertson Hall) 10:30--11:50am
+
+\item Precepts (taught by Teppei Yamamoto
+  \href{mailto:tyamamot@Princeton.EDU}{tyamamot@Princeton.EDU}): Tuesdays 4:30--6:00pm
+
+\item Kosuke's Office hours: Stop by anytime or make an appointment by email
+
+\item Teppei's Office hours: Wednesdays 4:30--6:30pm (126 Corwin)
+\end{itemize}
+
+\section{Questions about the Course Materials}
+
+In addition to precepts and office hours, please use the {\it
+  discussion board} at Blackboard when asking questions about
+lectures, problem sets, and other course materials.  This allows all
+students to benefit from the discussion and help each other understand
+the materials.  Teppei will be primarily responsible for handling
+questions about precepts and problem sets, while I will answer the
+questions about the lectures and other course materials.  But,
+students are also encouraged to participate in discussions and answer
+any questions that are posted.
+
+\section{Prerequisites}
+
+There are three prerequisites for this course.
+\begin{enumerate}
+\item Mathematics at the level of the math camp and POL 502
+\item Probability and statistics at the level of POL 571 and POL 572
+\item Statistical computing and programming at the level of the
+  statistical software workshop
+\end{enumerate}
+
+\section{Course Requirements}
+
+Your final grade is based on the problem sets and the final project:
+\begin{itemize}
+\item {\bf Problem sets} (40\%): There are four problem sets.
+  Although you are allowed to discuss the problem sets with others,
+  you should not copy someone else's computer code or answers.  In
+  particular, sharing a paper or electronic copy of your code and
+  answers with other students is strictly prohibited.
+ 
+%\item {\bf Inclass, closed-book exams} (60\%): Both the midterm and
+%  final exams are inclass and closed-book.  The format of the exams
+%  will be similar to those of POL 572.
+
+\item {\bf Final project} (60\%): The final project is due 4pm,
+  January 15.  Neither electronic nor late submission is allowed.  The
+  detailed instructions are given below and will be discussed in the
+  first lecture.
+\end{itemize} 
+% You may also choose to do both the exams and the final project, in
+% which case your final grade will be based on the best of the two
+% grades.
+
+\section{Computing}
+
+In this course, we support a statistical computing environment, called
+R.  R is available for any platform and without charge at \href{
+  http://www.r-project.org/}{http://www.r-project.org/}.  In a recent
+{\it New York Times} article, R is described as 
+\begin{quote}
+  a popular programming language used by a growing number of data
+  analysts inside corporations and academia.  It is becoming their
+  lingua franca [...] whether being used to set ad prices, find new
+  drugs more quickly or fine-tune financial models. Companies as
+  diverse as Google, Pfizer, Merck, Bank of America, the
+  InterContinental Hotels Group and Shell use it. [...] ``The great
+  beauty of R is that you can modify it to do all sorts of things,''
+  said Hal Varian, chief economist at Google. ``And you have a lot of
+  prepackaged stuff that's already available, so you're standing on
+  the shoulders of giants.''
+\end{quote}
+According to the article, R is also software that ``allows statisticians to do very intricate and complicated analyses without knowing the blood and guts of computing systems.'' 
+
+We choose R for its flexibility and power.  However, students may use other statistical software such as STATA for the problem sets and the final project, but at their own risk; that is, we will not be able to answer your software-related questions.  Of course, there will be no penalty for using different statistical software.  What matters is the analysis you present rather than the software you use.
+
+\section{Final Project}
+
+The final project is the most important requirement of this course.
+The goal is to conduct a project that can be {\it eventually}
+developed into a high-quality published paper.  I encourage you to
+continue working on your project after this course, and I am happy to continue to provide
+guidance along the way.  You may also consider applying for the summer
+political methodology meeting using the paper that comes out of your
+final project.  In the past, papers based on final projects for this
+course appeared in refereed journals and won a graduate student poster
+award at the political methodology summer meeting.  Here are a few
+important things to note when conducting the final project for this
+course.
+\begin{itemize}
+\item {\bf Collaboration} with another student in this class is
+  strongly encouraged for at least two reasons.  First, collaboration
+  usually leads to a better project given the limited amount of time
+  and intellectual capacity each student has; the sum is typically
+  better than any of its parts and can be even better than the sum of
+  its parts.  Second, collaboration will tend to make the project much
+  more fun.  You will learn a great deal from each other and will also
+  get to know your collaborator very well.  Please contact me if you
+  are considering a collaborative project with someone who is not
+  taking this class.
+
+\item {\bf Simultaneous submission to another class} is allowed
+  provided that you obtain a written permission from both instructors
+  in advance.  This means that your project must be appropriate for both
+  classes.
+
+\item {\bf Two alternative approaches to the project}.  First, you
+  may start with an original research question, develop a hypothesis,
+  collect a data set, and conduct statistical analysis of the data
+  in order to test the hypothesis.  That is, you conduct a research
+  project from scratch.  The second approach is to start with the
+  replication of the results in a published article and improve or
+  extend the original analysis.  If you decide to take this approach,
+  you need to contact the author(s) for the replication information as
+  soon as possible (unless it is already available online) so that you
+  will be able to get started on the analysis early in the semester.
+
+\item {\bf Proposal} is due in class on December 3.  The proposal
+  should contain {\it at the very minimum} the following components of
+  the final project; (1) the brief statement of a question to be
+  addressed and a hypothesis to be tested, (2) the detailed
+  description of the data set to be analyzed, (3) the detailed results
+  of a preliminary analysis, and (4) the detailed tentative plan of
+  the final analysis.  For those of you who have made substantial
+  progress, the ``proposal'' may take the form of a draft paper.
+
+\item {\bf Writing style} is very important for the success of any
+  scientific paper.  Be accurate and concise.  Pay special attention
+  to tables and figures, which form the core of an empirical paper.
+  Here is what I do when I draft a paper.  Start with tables, figures
+  (and their detailed captions), and a rough description of the data
+  and the methods you use (that is, do not start writing until you
+  have them!).  Then, write the abstract followed by the introduction.
+  Make sure that you clearly state your contributions in the abstract
+  and at the beginning of the introduction.  Once these are done, then
+  it is easy to write the rest of the paper by further elaborating
+  each point you make in the introduction.  The structure of the paper
+  should be top-down (i.e., don't keep readers guessing what you are
+  going to say next), and you should carefully write the first and
+  last sentences of each section and paragraph. Take advantage of sectioning to write a paper with a
+  clear and logical structure. There are many 
+  books and articles explaining how to write a good scientific paper,
+  but here is one written by a political scientist.
+  \begin{bibunit}[unsrtnat]
+    \nocite{king:06}
+    \putbib[my]
+  \end{bibunit}
+
+  Finally, I recommend that you consider using \LaTeX\ (together with BibTeX for bibliography).  
+
+
+\item {\bf Evaluation} of the final project will be based on the
+  following criteria.  For a purely methodological paper, the
+  originality and significance of the proposed method will form the
+  basis of evaluation.  The evaluation of a more applied paper depends
+  on how a statistical method is effectively used to answer the
+  substantive question set forth by its author(s).
+\end{itemize}
+
+\section{Textbooks}
+
+There is no single textbook for this course.  Instead, the course
+materials consist of lecture notes, lecture slides, and assigned
+readings.  In addition, however, you may find the relevant parts of
+the following textbooks useful.  Some of these books are reserved at
+the Firestone library.
+\begin{enumerate}
+\item Political Methodology
+  \begin{bibunit}[unsrtnat]
+    \nocite{king:98}
+    \putbib[my]
+  \end{bibunit}
+  
+\item Probability and Statistics
+  \begin{bibunit}[unsrtnat]
+    \nocite{degr:sche:02,wass:05}
+    \putbib[my]
+  \end{bibunit}
+  
+\item Econometrics
+  \begin{bibunit}[unsrtnat]
+   \nocite{haya:00,wool:02}
+   \putbib[my]
+ \end{bibunit}
+ 
+\item Regression Modeling
+  \begin{bibunit}[unsrtnat]
+   \nocite{gelm:hill:07}
+   \putbib[my]
+ \end{bibunit}
+
+\item Causal Inference and Research Design
+  \begin{bibunit}[unsrtnat]
+    \nocite{morg:wins:07,angr:pisc:09}
+    \putbib[my]
+  \end{bibunit}
+ 
+\item R
+  \begin{bibunit}[unsrtnat]
+    \nocite{fox:02}
+    \putbib[my]
+  \end{bibunit}
+\end{enumerate}
+
+\section{Tentative Course Outline}
+
+We will cover the following topics in the order they are listed (and as time permits!).
+
+\begin{enumerate}
+\item Regression Modeling for Cross-section Data (Continued from POL 572)
+  \begin{enumerate}
+  \item Event count models 
+  \item Generalized linear models
+  \end{enumerate}
+
+\item Survival Data Analysis
+ \begin{enumerate}
+ \item Basic concepts
+ \item Parametric regression models
+ \item Cox proportional-hazard model
+ \item Competing risks models
+ \end{enumerate}
+
+\item Causal Inference with Cross-section Data
+  \begin{enumerate}
+  \item Matching methods
+  \item Weighting methods
+  \end{enumerate}
+
+\item Regression Modeling for Longitudinal Data
+  \begin{enumerate}
+  \item Linear mixed effects models
+  \item Generalized linear mixed effects models
+  \item Multilevel, Hierarchical models
+ \end{enumerate}
+
+\item Causal Inference for Longitudinal Data
+  \begin{enumerate}
+  \item Difference-in-difference models
+  \item Matching methods
+  \item Weighting methods
+  \end{enumerate}
+
+\item Statistical Analysis with Missing Data
+  \begin{enumerate}
+  \item Basic concepts and assumptions
+ \item Multiple imputation
+  \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
